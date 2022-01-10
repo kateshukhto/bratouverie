@@ -68,7 +68,6 @@
   &__video {
     margin-top: 50px;
     display: flex;
-    align-items: center;
     margin-bottom: 30px;
     
     &-circle {
@@ -92,6 +91,7 @@
       }
     }
     &-link {
+      position: relative;
       text-decoration: none;
       color: #ffffff;
       font-family: 'Gilroy Regular';
