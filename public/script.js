@@ -28,37 +28,6 @@ $('.review__slider').slick({
   ]
 });
 
-// $('.collection__slider').slick({
-//   dots: true,
-//   arrow: false,
-//   infinite: false,
-//   speed: 500,
-//   slidesToShow: 1,
-//   responsive: [
-//     {
-//       breakpoint: 1024,
-//       settings: {
-//         slidesToShow: 1,
-//         infinite: true,
-//         dots: true
-//       }
-//     },
-//     {
-//       breakpoint: 600,
-//       settings: {
-//         slidesToShow: 1,
-//       }
-//     },
-//     {
-//       breakpoint: 480,
-//       settings: {
-//         slidesToShow: 1,
-//       }
-//     }
-//   ]
-// });
-
-
 const burger = document.querySelector('.burger')
 const menu = document.querySelector('.menu__burger')
 const close = document.querySelector('.menu__burger-close')
