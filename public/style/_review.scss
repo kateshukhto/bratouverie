@@ -1,0 +1,67 @@
+.review {
+  &__wrapper {
+    padding: 30px 15px;
+  }
+
+  &__title {
+    text-align: center;
+    color: #2c4046;
+    font-family: 'Gilroy Regular';
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  &__slider {
+    margin-bottom: 50px;
+  }
+  &__btn {
+    margin: 20px auto;
+    width: 207px;
+    height: 42px;
+    border-radius: 21px;
+    background-color: #ec1fc0;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Gilroy-bold';
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 60px;
+}
+/* the slides */
+.slick-slide {
+  margin: 0 10px;
+}
+/* the parent */
+.slick-list {
+  margin: 0 -10px;
+}
+.slick-dots {
+  bottom: -40px; 
+  li button:before,
+  li.slick-active button:before {
+    color: transparent;
+    opacity: 1;
+  }
+  li button:before{
+    background-color: #dadada;
+    border-radius: 50%;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+
+  }
+  li.slick-active button:before {
+    background-color: #ec1fc0;
+  }
+}
+
+.slick-track {
+  margin:auto;
+}

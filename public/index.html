@@ -1,43 +1,318 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <link rel="stylesheet" href="./style/css/style.css">
+  <title>Bratouverie</title>
+</head>
+<body>
+  <main class="main">
+    <div class="main__header">
+      <div class="burger">
+        <div class="burger__span"></div>
+        <div class="burger__span"></div>
+        <div class="burger__span"></div>
+      </div>
+      <img class="main__logo" src="./images/main.png" alt="main logo">
+      <div class="main__cart">
+        <img class="main__cart-img" src="./images/shopping-cart.png" alt="shopping-cart">
+        <div class="main__cart-count"></div>
+      </div>
+    </div>
+    <div class="main__inner">
+      <h2 class="main__title"> Одежда с технологией подтверждения подлинности</h2>
+      <img class="main__subtitle" src="./images/qranbook.png" alt="QR"/>
+      <div class="main__background">
+        <img class="main__background-logo" src="./images/logo.png" alt="">
+        <img class="main__background-img" src="./images/t-shirt.png" alt="">
+        <div class="circle circle-first"></div>
+        <div class="circle circle-second"></div>
+        <div class="circle circle-third"></div>
+      </div>
+      <div class="main__video">
+        <div class="main__video-circle">
+          <span class="triangle-right"></span>
+        </div>
+        <a class="main__video-link" href="https://www.instagram.com/p/CYikpDGpVKW/">Смотреть видео</a>
+      </div>
+      <p class="main__sum">100 000 ₽</p>
+      <button class="main__btn" data-toggle="modal" data-target="#payment">Забронировать</button>
+    </div>
+  </main>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <div class="menu__burger">
+    <div class="menu__burger-wrapper">
+      <div class="menu__burger-close">&times;</div>
+      <img class="menu__burger-logo" src="./images/main.png" alt="logo">
+      <div class="menu__burger-text">bratouverie.shop</div>
+      <a class="menu__burger-link" href="https://www.instagram.com/bratouverie.shop/">bratouverie.com</a>
+      <div class="menu__burger-btns">
+        <button class="menu__burger-btn">Личный кабинет</button>
+        <button class="menu__burger-btn">Выход</button>
+      </div>
+      <div class="menu__burger-icon">
+        <img class="menu__burger-img phone" src="./images/phone-call.png" alt="phone call">
+        <img class="menu__burger-img search" src="./images/search.png" alt="search">
+      </div>
+    </div>
+  </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <!--unique-->
+  <section class="unique">
+    <div class="unique__wrapper">
+      <h3 class="unique__title">Уникальность технологии</h3>
+      <img class="unique__img" src="./images/t-shirt.jpg" alt="t-shirt">
+    </div>
+      <div class="unique__list">
+        <div class="unique__list-item">
+          <div class="unique__list-title">click qr</div>
+          <div class="unique__list-circle">+</div>
+        </div>
+        <div class="unique__list-item">
+          <div class="unique__list-title">check owner</div>
+          <div class="unique__list-circle">+</div>
+        </div>
+        <div class="unique__list-item">
+          <div class="unique__list-title">check dress</div>
+          <div class="unique__list-circle">+</div>
+        </div>
+        <div class="unique__list-item">
+          <div class="unique__list-title">checkt domane</div>
+          <div class="unique__list-circle">+</div>
+        </div>
+        <div class="unique__list-item">
+          <div class="unique__list-title">checkt name</div>
+          <div class="unique__list-circle">+</div>
+        </div>
+        <div class="unique__list-item">
+          <div class="unique__list-title">check number</div>
+          <div class="unique__list-circle">+</div>
+        </div>
+        <div class="unique__list-item">
+          <div class="unique__list-title">all coincided?  brand is
+            true  if not, failure</div>
+          <div class="unique__list-circle">+</div>
+        </div>
+      </div>
+  </section>
+  <!--work-->
+  <section class="work">
+    <div class="work__wrapper">
+      <h3 class="work__title">Как это работает ?</h3>
+        <div class="cart">
+          <div class="cart__item">
+            <div class="cart__circle">
+              <img class="cart__img" src="./images/work/t-shirt.png" alt="t-shirt icon">
+            </div>
+            <p class="cart__descrip">Создание уникальной <br> одежды</p>
+          </div>
+          <div class="cart__item">
+            <div class="cart__circle">
+              <img class="cart__img" src="./images/work/phone.png" alt="phone icon">
+            </div>
+            <p class="cart__descrip">Одежда попадает в лицензионный магазин </p>
+          </div>
+          <div class="cart__item">
+            <div class="cart__circle">
+              <img class="cart__img" src="./images/work/computer.png" alt="computer icon">
+            </div>
+            <p class="cart__descrip">Регистрация покупателя в приложении CheckBrandcom</p>
+          </div>
+          <div class="cart__item">
+            <div class="cart__circle">
+              <img class="cart__img" src="./images/work/qr.png" alt="qr icon">
+            </div>
+            <p class="cart__descrip">Пользователь сканирует <br> QR на новой вещи</p>
+          </div>
+          <div class="cart__item">
+            <div class="cart__circle">
+              <img class="cart__img" src="./images/work/click.png" alt="click icon">
+            </div>
+            <p class="cart__descrip">Вводит полученный в приложении закрытый ключ</p>
+          </div>
+          <div class="cart__item">
+            <div class="cart__circle">
+              <img class="cart__img" src="./images/work/block.png" alt="block icon" >
+            </div>
+            <p class="cart__descrip">Вещь закрепляется в аккаунте пользователя как его собственность</p>
+          </div>
+        </div>
+        <div class="work__descrip">
+          <p class="work__text">
+            Убедиться в подленности вещи можно только на https://checkbrand.com</p>
+        </div>
+    </div>
+  </section>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <!--check-->
+  <section class="check">
+    <div class="check__wrapper">
+      <h3 class="check__title">Убедитесь сами</h3>
+      <h6 class="check__subtitle">Перейдите на сайт и убедитесь в доставерности</h6>
+      <img class="check__img" src="./images/check.png"/>
+      <a href="https://checkbrand.com/" class="check__link">Проверить</a>
+    </div>
+  </section>
+
+  <!--booking-->
+  <section class="booking">
+    <div class="booking__wrapper">
+    <div class="booking__main">
+      <h3 class="booking__main-title">Забронируй <br>уникальный номер!</h3>
+      <h4 class="booking__main-subtitle">CheckBrandcom </h4>
+      <div class="booking__main-text">Стоимость аккаунтов дорожает на одну тысячу при каждом бронировании</div>
+    </div>
+    <div class="booking__right">
+      <div class="booking__right-number">900-1000</div>
+      <div class="booking__right-date">
+        <p>Бронирование 11.01-16.01 </p>
+        <p>Выкуп/Продажа бронирований 16.01 - 21.01</p>
+      </div>
+      <div class="booking__right-text">Уникальный номер: 113 000 Р</div>
+      <div class="booking__right-num">913</div>
+      <button class="booking__right-btn" data-toggle="modal" data-target="#payment">Забронировать</button>
+    </div>
+    </div>
+  </section>
+
+  <!--review-->
+  <section class="review">
+    <div class="review__wrapper">
+      <h3 class="review__title">Фото довольных клиентов</h3>
+      <div class="review__slider">
+        <div class="slide">
+          <img src="./images/review1.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./images/review2.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./images/review1.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./images/review2.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./images/review1.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./images/review2.jpg" alt="">
+        </div>
+      </div>
+      <div class="review__btn">Разместить фото</div>
+    </div>
+  </section>
+
+  <!--collection-->
+  <section class="collection">
+    <div class="collection__wrapper">
+      <h3 class="collection__title">Весь ассортимент</h3>
+      <div class="collection__slider">
+        <div class="collection__slide">
+          <div class="collection__item">
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/trousers.jpg" alt="trousers">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/hoodies.jpg" alt="hoodies">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/trousers.jpg" alt="trousers">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/hoodies.jpg" alt="hoodies">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/trousers.jpg" alt="trousers">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/hoodies.jpg" alt="hoodies">
+            </div>
+          </div>
+        </div>
+        <div class="collection__slide">
+          <div class="collection__item">
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/trousers.jpg" alt="trousers">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/hoodies.jpg" alt="hoodies">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/trousers.jpg" alt="trousers">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/hoodies.jpg" alt="hoodies">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/trousers.jpg" alt="trousers">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/hoodies.jpg" alt="hoodies">
+            </div>
+          </div>
+        </div>
+        <div class="collection__slide">
+          <div class="collection__item">
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/trousers.jpg" alt="trousers">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/hoodies.jpg" alt="hoodies">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/trousers.jpg" alt="trousers">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/hoodies.jpg" alt="hoodies">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/trousers.jpg" alt="trousers">
+            </div>
+            <div class="collection__item-wrapper">
+              <img class="collection__item-img" src="./images/hoodies.jpg" alt="hoodies">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--social-->
+  <section class="social">
+    <div class="ya-share2" data-curtain data-shape="round" data-color-scheme="whiteblack" data-services="vkontakte,facebook,odnoklassniki,telegram,twitter,viber,linkedin,reddit"></div>
+  </section>
+
+
+
+  <!--modal payment-->
+  <div class="modal fade" id="payment" tabindex="-1"  aria-labelledby="paymentLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Оплата</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <iframe src="https://yoomoney.ru/quickpay/button-widget?targets=CheckBrand.com&default-sum=2&button-text=11&yoomoney-payment-type=on&button-size=s&button-color=orange&fio=on&phone=on&mail=on&successURL=&quickpay=small&account=4100117489241649&" width="127" height="25" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://yastatic.net/share2/share.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="./slick/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
 </html>
