@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres
+    container_name: postgresdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./welbex/pg_data:/var/lib/postgresql/data/pgdata
+    environment:
+      POSTGRES_DB: django_db
+      POSTGRES_PASSWORD: 123
+      PGDATA: /var/lib/postgresql/data/pgdata
+    restart: always
+  back:
+    build: welbex
+    image: back
+    command: python manage.py runserver 0.0.0.0:8000
+    container_name: backendDjango
+    ports:
+      - "8000:8000"
+    environment:
+      POSTGRES_NAME: django_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    restart: always
+    depends_on:
+      - db
+  front:
+    build: frontend
+    image: front
+    command: npm start
+    container_name: frontendNode
+    ports:
+      - "80:3000"
+    depends_on:
+      - back
